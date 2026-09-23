@@ -4,7 +4,7 @@
 // import Footer from 'common/src/components/Footer/index';
 import { Affix, Button, Icon } from "antd";
 import { ResetCSS } from "assets/css/style";
-import logo from "assets/image/hosting/logo.png";
+import logo from "assets/image/hosting/ulsa-logo.png";
 import Navbar from "components/Navbar";
 // import Navbar from '../../../common/src/containers/Hosting/Navbar'
 import Footer from "components/Footer/index";
@@ -17,7 +17,7 @@ import { hostingTheme } from "./hosting";
 import { ContentWrapper, GlobalStyle } from "./hosting.style";
 
 const name = "TomCatJS";
-export const siteTitle = "Tuyển sinh Học viện Chính sách và Phát triển";
+export const siteTitle = "Hệ thống tra cứu văn bằng, chứng chỉ ULSA";
 
 
 export default function Layout({ children, home }) {
@@ -34,27 +34,31 @@ export default function Layout({ children, home }) {
     <div>
       <Head>
         <link rel="prefetch" href="/favicon.ico" />
-        <link rel="prefetch" href="/assets/image/hosting/logo.png" />
-        <link rel="prerender" href="https://daotao.aisenote.com/" />
-        <link rel="prerender" href="https://tuyensinh.ptit.edu.vn/" />
+        <link rel="prefetch" href="/assets/image/hosting/ulsa-logo.png" />
+        <link rel="prerender" href="https://ulsa.edu.vn/" />
+        <link rel="prerender" href="https://tuyensinh.ulsa.edu.vn/" />
         <link />
         <title>
-          HỌC VIỆN CHÍNH SÁCH VÀ PHÁT TRIỂN, CỔNG THÔNG TIN PHÒNG ĐÀO TẠO
+          HỆ THỐNG TRA CỨU VĂN BẰNG, CHỨNG CHỈ - TRƯỜNG ĐẠI HỌC LAO ĐỘNG - XÃ HỘI
         </title>
         <meta
           name="Description"
-          content="HỌC VIỆN CHÍNH SÁCH VÀ PHÁT TRIỂN, CỔNG THÔNG TIN PHÒNG ĐÀO TẠO"
+          content="Hệ thống tra cứu văn bằng, chứng chỉ của Trường Đại học Lao động - Xã hội"
         />
-        <meta name="theme-color" content="#eb4d4b" />
+        <meta name="theme-color" content="#063077" />
         <link
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,500i,700,900|Open+Sans:400,400i,600,700"
           // rel="Prefetch"
           rel="preload"
           as="font"
         />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        />
         <meta
           name="description"
-          content="HỌC VIỆN CHÍNH SÁCH VÀ PHÁT TRIỂN CỔNG THÔNG TIN ĐÀO TẠO"
+          content="Hệ thống tra cứu văn bằng, chứng chỉ của Trường Đại học Lao động - Xã hội"
         />
         <meta property="og:image" content={logo} />
         <meta name="og:title" content={siteTitle} />
@@ -75,13 +79,14 @@ export default function Layout({ children, home }) {
 
             {children}
             <Footer />
-            <Affix offsetBottom={200} innerZ={99999}>
+            <Affix offsetBottom={20} innerZ={99999}>
               <Button
                 type="primary"
                 style={{
                   float: "right",
                   margin: 20,
-                  backgroundColor: "#1461C8",
+                  backgroundColor: "#063077",
+                  borderColor: "#063077",
                   borderRadius: "40%",
                 }}
                 onClick={scrollToTop}

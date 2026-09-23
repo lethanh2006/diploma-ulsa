@@ -41,7 +41,7 @@ const VBChungChi = ({
                 fontSize: "clamp(22px, 6.4vw, 42px)",
                 lineHeight: "135%",
                 letterSpacing: "0.03em",
-                color: "#1461C8",
+                color: "#1F4F9F",
               }}
             >
               {t("index.question")}
@@ -53,7 +53,7 @@ const VBChungChi = ({
                 fontSize: "clamp(12px, 3.8vw, 20px)",
                 lineHeight: "135%",
                 letterSpacing: "0.03em",
-                color: "#051A53",
+                color: "#063077",
               }}
             >
               {t("index.prompt")}

@@ -1,7 +1,7 @@
 import { Col, Row } from "antd";
 import React from "react";
 import Box from "components/Box";
-import LogoImage from "assets/image/hosting/apd-logo.png";
+import LogoImage from "assets/image/hosting/ulsa-logo.png";
 import Container from "components/UI/Container";
 // NOTE: Giữ lại các import cần thiết, có thể loại bỏ các Wrapper từ style cũ không dùng đến nhưng vẫn import để không break code nếu có file nào khác đang depend.
 import {

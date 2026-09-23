@@ -1,4 +1,4 @@
-import { Col, Modal, Row, Spin } from "antd";
+import { Col, Icon, Modal, Row, Spin } from "antd";
 import axios from "axios";
 import FormTraCuu from "components/Table/FormTraCuuVBCC";
 import TableTraCuuVBCC from "components/Table/TableTraCuuVBCC";
@@ -11,6 +11,13 @@ import { useMediaQuery } from "react-responsive";
 import SectionWrapper from "../styles/vanbangchungchi.style";
 import bgtracuu from "assets/image/bgtracuu.png";
 import { useTranslation } from "components/Utils/useTranslation";
+
+const ulsaOkButtonProps = {
+  style: {
+    backgroundColor: "#1F4F9F",
+    borderColor: "#1F4F9F",
+  },
+};
 
 const TraCuuVanBangChungChi = (props) => {
   const { t } = useTranslation();
@@ -27,6 +34,7 @@ const TraCuuVanBangChungChi = (props) => {
       Modal.warning({
         title: t("index.messages.warning"),
         content: t("index.messages.warning_2_fields"),
+        okButtonProps: ulsaOkButtonProps,
       });
       return;
     }
@@ -41,10 +49,11 @@ const TraCuuVanBangChungChi = (props) => {
       Modal.error({
         title: t("index.messages.warning"),
         content: t("index.messages.no_info_found"),
+        okButtonProps: ulsaOkButtonProps,
         onOk() { },
       });
       setloading(false);
-      setds([]);
+      setds({ Error: true });
       return;
     }
     setds(arr ?? []);
@@ -70,7 +79,10 @@ const TraCuuVanBangChungChi = (props) => {
 
   return (
     <Row>
-      <Spin spinning={!!loading}>
+      <Spin
+        spinning={!!loading}
+        indicator={<Icon type="loading" style={{ color: "#1F4F9F", fontSize: 28 }} spin />}
+      >
         <SectionWrapper id="daotao">
           {isMobile && (
             <Container fullWidth noGutter>

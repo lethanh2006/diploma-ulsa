@@ -65,8 +65,8 @@ const KetQuaVanBang = ({ thongTinTraCuu = [] }) => {
               }}
             >
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="12.2002" cy="13.8" r="3" stroke="#007AFF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M20.4 15.2C20.4 10.6713 16.7287 7 12.2 7C7.67126 7 4 10.6713 4 15.2" stroke="#007AFF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                <circle cx="12.2002" cy="13.8" r="3" stroke="#1F4F9F" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M20.4 15.2C20.4 10.6713 16.7287 7 12.2 7C7.67126 7 4 10.6713 4 15.2" stroke="#1F4F9F" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </a>
           </Link>
@@ -76,15 +76,8 @@ const KetQuaVanBang = ({ thongTinTraCuu = [] }) => {
     },
   ];
 
-  if (thongTinTraCuu?.Error) {
-    return (
-      <div style={{ padding: 16, textAlign: "center" }}>
-        <i style={{ color: "red" }}>{t("index.table.no_result_msg")}</i>
-      </div>
-    );
-  }
-
-  const isEmpty = !thongTinTraCuu || thongTinTraCuu.length === 0;
+  const hasError = !!thongTinTraCuu?.Error;
+  const isEmpty = hasError || !thongTinTraCuu || thongTinTraCuu.length === 0;
   const dataSource = !isEmpty ? thongTinTraCuu?.map((item, index) => ({
     ...item,
     stt: index + 1,
@@ -108,7 +101,7 @@ const KetQuaVanBang = ({ thongTinTraCuu = [] }) => {
             fontSize: "clamp(20px, 3.8vw, 28px)",
             lineHeight: "135%",
             letterSpacing: "0.03em",
-            color: "#051A53"
+            color: "#063077"
           }}>
             {t("index.table.search_result_header")}
           </span>
@@ -120,8 +113,8 @@ const KetQuaVanBang = ({ thongTinTraCuu = [] }) => {
             xmlns="http://www.w3.org/2000/svg"
             style={{ flex: "none", order: 1, flexGrow: 0 }}
           >
-            <path d="M22.6666 22L28 27.3333" stroke="#1461C8" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-            <circle cx="14.6667" cy="14.6667" r="10.6667" stroke="#1461C8" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M22.6666 22L28 27.3333" stroke="#1F4F9F" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+            <circle cx="14.6667" cy="14.6667" r="10.6667" stroke="#1F4F9F" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </h3>
         {isEmpty ? (
@@ -163,9 +156,11 @@ const KetQuaVanBang = ({ thongTinTraCuu = [] }) => {
               fontSize: "clamp(12px, 3.8vw, 20px)",
               lineHeight: "135%",
               letterSpacing: "0.03em",
-              color: "#373D4E"
+              color: hasError ? "#D93025" : "#373D4E"
             }}>
-              {t("index.table.fill_info_prompt")}
+              {hasError
+                ? t("index.table.no_result_msg")
+                : t("index.table.fill_info_prompt")}
             </span>
           </div>
         ) : (
@@ -201,7 +196,7 @@ const KetQuaVanBang = ({ thongTinTraCuu = [] }) => {
             font-size: 17px !important;
             line-height: 170% !important;
             letter-spacing: 0.03em !important;
-            color: #051A53 !important;
+            color: #063077 !important;
             background: #F9F9F9 !important;
             padding: 16px 24px !important;
             border-bottom: 1px solid #E8EAF0 !important;

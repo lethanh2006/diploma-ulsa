@@ -1,4 +1,4 @@
-import { Col, Descriptions, Divider, Empty, Row, Spin, Table } from "antd";
+import { Col, Descriptions, Divider, Empty, Icon, Row, Spin, Table } from "antd";
 import axios from "axios";
 import { ipPTIT } from "data/ip";
 import moment from "moment";
@@ -55,7 +55,10 @@ const ChiTietVanBang = () => {
   }, [idChiTiet]);
 
   return (
-    <Spin spinning={loading}>
+    <Spin
+      spinning={loading}
+      indicator={<Icon type="loading" style={{ color: "#1F4F9F", fontSize: 28 }} spin />}
+    >
       <div className="vbcc-container">
         <div
           style={{
@@ -79,7 +82,7 @@ const ChiTietVanBang = () => {
               style={{
                 fontSize: 28,
                 fontWeight: "bold",
-                color: "#1a253f",
+                color: "#063077",
                 display: "flex",
                 alignItems: "center",
                 gap: 12,
@@ -96,7 +99,7 @@ const ChiTietVanBang = () => {
               >
                 <path
                   d="M22.667 22L28.0003 27.3333"
-                  stroke="#1461C8"
+                  stroke="#1F4F9F"
                   strokeWidth="3"
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -105,7 +108,7 @@ const ChiTietVanBang = () => {
                   cx="14.6667"
                   cy="14.6667"
                   r="10.6667"
-                  stroke="#1461C8"
+                  stroke="#1F4F9F"
                   strokeWidth="3"
                   strokeLinecap="round"
                   strokeLinejoin="round"

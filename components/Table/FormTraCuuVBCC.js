@@ -53,7 +53,7 @@ const FormTraCuuVBCC = (props) => {
               borderRadius: 12,
               backgroundColor: "rgba(255, 255, 255, 0.85)",
               border: "1px solid rgba(255, 255, 255, 0.5)",
-              boxShadow: "0 8px 32px 0 rgba(20, 97, 200, 0.08)",
+              boxShadow: "0 8px 32px 0 rgba(31, 79, 159, 0.08)",
               backdropFilter: "blur(12px)",
               WebkitBackdropFilter: "blur(12px)",
             }}
@@ -89,6 +89,7 @@ const FormTraCuuVBCC = (props) => {
                       size="large"
                       style={{ width: "100%", fontSize: "15px" }}
                       format={"DD/MM/YYYY"}
+                      dropdownClassName="ulsa-vbcc-date-picker"
                       placeholder={t("index.form.select_dob")}
                     />,
                   )}
@@ -191,7 +192,7 @@ const FormTraCuuVBCC = (props) => {
                   >
                     <path
                       d="M12.4 19.8215C8.20264 19.8215 4.8 16.4093 4.8 12.2C4.8 8.87077 6.92859 6.04011 9.89541 5.00202M12.4 19.8215L10.7905 18.2075M12.4 19.8215L10.826 21.4M12.4 4.57847C16.5974 4.57847 20 7.99074 20 12.2C20 15.5292 17.8714 18.3599 14.9046 19.398M12.4 4.57847L13.974 3M12.4 4.57847L14.0095 6.19254"
-                      stroke="#1461C8"
+                      stroke="#1F4F9F"
                       strokeWidth="1.5"
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -210,8 +211,8 @@ const FormTraCuuVBCC = (props) => {
                     gap: "7.23px",
                     width: "200px",
                     height: "40px",
-                    background: "#1461C8",
-                    borderColor: "#1461C8",
+                    background: "#1F4F9F",
+                    borderColor: "#1F4F9F",
                     borderRadius: "4px",
                     fontSize: "15px",
                   }}
@@ -222,9 +223,27 @@ const FormTraCuuVBCC = (props) => {
             </Form.Item>
           </Card>
         </Form>
-        <style jsx>{`
-          .vbcc-form :global(.ant-form-item) {
+        <style jsx global>{`
+          .vbcc-form .ant-form-item {
             margin-bottom: 5px;
+          }
+          .vbcc-form .ant-input:hover,
+          .vbcc-form .ant-calendar-picker:hover .ant-input {
+            border-color: #1F4F9F;
+          }
+          .vbcc-form .ant-input:focus,
+          .vbcc-form .ant-calendar-picker:focus .ant-input:not(.ant-input-disabled) {
+            border-color: #1F4F9F;
+            box-shadow: 0 0 0 2px rgba(31, 79, 159, 0.18);
+          }
+          .ulsa-vbcc-date-picker .ant-calendar-today .ant-calendar-date {
+            border-color: #1F4F9F;
+            color: #1F4F9F;
+          }
+          .ulsa-vbcc-date-picker .ant-calendar-selected-day .ant-calendar-date,
+          .ulsa-vbcc-date-picker .ant-calendar-date:hover {
+            background: #1F4F9F;
+            color: #ffffff;
           }
         `}</style>
       </Col>

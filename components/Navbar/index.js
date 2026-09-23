@@ -4,7 +4,7 @@
 import { useRouter } from "next/router";
 import { Button, Col, Drawer, Icon, Menu, Row, Dropdown } from "antd";
 // import { MENU_ITEMS_MOBILE } from 'common/src/data/Hosting/data';
-import LogoImage from "assets/image/hosting/apd-logo.png";
+import LogoImage from "assets/image/hosting/ulsa-logo.png";
 import axios from "axios";
 import Box from "components/Box";
 import ScrollSpyMenu from "components/ScrollSpyMenu";
@@ -290,7 +290,7 @@ const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
     <header>
       <div
         style={{
-          backgroundColor: "#b9191c",
+          backgroundColor: "#063077",
           color: "white",
           padding: "8px 0",
           fontSize: "12px",
@@ -306,7 +306,7 @@ const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
           >
             <div style={{ display: "flex", alignItems: "center", gap: "4px" }}>
               <a
-                href="https://ptit.edu.vn"
+                href="https://ulsa.edu.vn"
                 target="_blank"
                 rel="noreferrer"
                 style={{
@@ -393,7 +393,7 @@ const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
               >
                 <div
                   style={{
-                    color: "#1461C8",
+                    color: "#1F4F9F",
                     fontSize: "clamp(11px, 2.6vw, 14px)",
                     fontWeight: "600",
                     textAlign: "center",
@@ -406,7 +406,7 @@ const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
 
                 <div
                   style={{
-                    color: "#002060",
+                    color: "#063077",
                     fontSize: "clamp(13px, 3vw, 16px)",
                     fontWeight: "750",
                     textAlign: "center",
@@ -426,7 +426,7 @@ const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
     <header>
       <div
         style={{
-          backgroundColor: "#1461C8",
+          backgroundColor: "#063077",
           color: "white",
           padding: "12px 40px",
           fontSize: "14px",
@@ -456,7 +456,7 @@ const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
               </svg>
 
               <a
-                href="https://apd.edu.vn"
+                href="https://ulsa.edu.vn"
                 target="_blank"
                 rel="noreferrer"
                 style={{
@@ -536,7 +536,7 @@ const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
             >
               <div
                 style={{
-                  color: "#1461C8",
+                  color: "#1F4F9F",
                   fontSize: "clamp(12px, 2vw, 15px)",
                   fontWeight: "600",
                   marginBottom: "4px",
@@ -547,7 +547,7 @@ const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
 
               <div
                 style={{
-                  color: "#002060",
+                  color: "#063077",
                   fontSize: "clamp(16px, 2vw, 18px)",
                   fontWeight: "750",
                   textTransform: "uppercase",

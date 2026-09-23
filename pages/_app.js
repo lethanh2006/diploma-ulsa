@@ -11,13 +11,13 @@ export default ({ Component, pageProps }) => (
     <Layout>
       <Modal />
       <DefaultSeo
-        title="HỌC VIỆN CHÍNH SÁCH VÀ PHÁT TRIỂN CỔNG THÔNG TIN ĐÀO TẠO"
-        description="Trang Web cung cấp thông tin về Học viện Chính sách và Phát triển"
+        title="HỆ THỐNG TRA CỨU VĂN BẰNG, CHỨNG CHỈ ULSA"
+        description="Hệ thống tra cứu văn bằng, chứng chỉ của Trường Đại học Lao động - Xã hội"
         openGraph={{
           type: "website",
           locale: "vi_VN",
-          url: "https://tuyensinhptit.aisenote.com/",
-          site_name: "HỌC VIỆN CHÍNH SÁCH VÀ PHÁT TRIỂN CỔNG THÔNG TIN ĐÀO TẠO",
+          url: "https://ulsa.edu.vn/",
+          site_name: "TRƯỜNG ĐẠI HỌC LAO ĐỘNG - XÃ HỘI",
           images: [
             {
               url: "/assets/image/hosting/metadata.png",
