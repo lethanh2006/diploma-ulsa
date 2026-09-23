@@ -10,6 +10,9 @@
     "dev": "next dev",
     "start": "next start"
   },
+  "resolutions": {
+    "art-template": "4.13.2"
+  },
   "dependencies": {
     "@ant-design/icons": "4.7.0",
     "@glidejs/glide": "^3.3.0",
