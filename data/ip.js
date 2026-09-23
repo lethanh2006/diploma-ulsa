@@ -5,7 +5,7 @@
 // export const ip = "https://apituyensinhptit.aisenote.com"; //ip dev
 
 export const ip3 = "https://apiquanlydaotao.ptit.edu.vn/";
-export const ip = "https://apiquanlydaotao.ptit.edu.vn/";
+export const ip = "https://apigw.ulsa.edu.vn/";
 export const ipPTIT = "https://gwdu.ptit.edu.vn/";
 
 export const ip2 = "https://apiquanlydaotao.ptit.edu.vn/api/";
